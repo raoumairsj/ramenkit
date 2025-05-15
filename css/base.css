@@ -1,32 +1,25 @@
 
 :root{
     --color-background: 2, 7, 20;
-    --gradient-background: ;
-    --color-accent: 191, 253, 59;
-    --color-foreground: 255, 255, 255;
-    --color-heading: 255, 255, 255;
+    --color-heading: 9, 18, 44, 1;
+    --color-theme: 255, 235, 136, 1;
+    --color-theme2: 73, 61, 158, 1;
+    --color-theme3: 253, 171, 255, 1;
+    --color: 245, 245, 245, 1;
+
     --color-shadow: 0, 0, 0;
-    --color-primary-button: 191, 253, 59;
+    --color-primary-button: 115, 57, 171, 1;
     --color-primary-button-text: 2, 7, 20;
-    --color-primary-button-hover: 255, 255, 255;
-    --color-primary-button-hover-text: 2, 7, 20;
-    --color-primary-button-outline: 2, 7, 20;
-    --color-primary-button-outline-hover: 191, 253, 59;
+
     --color-secondary-button: 255, 255, 255;
     --color-secondary-button-text: 2, 7, 20;
     --color-secondary-button-hover: 191, 253, 59;
-    --color-secondary-button-hover-text: 2, 7, 20;
-    --color-secondary-button-outline: 191, 253, 59;
-    --color-secondary-button-outline-hover: 2, 7, 20;
+
     --color-link: 191, 253, 59;
     --color-input: 255, 255, 255;
     --color-border: 227, 227, 227;
     --color-shadow: 0, 0, 0;
-    --color-input-outline: 227, 227, 227;
-    --color-placeholder: 70, 76, 90;
-    --color-badge-foreground: 255, 255, 255;
-    --color-badge-background: 2, 7, 20;
-    --color-badge-border: 2, 7, 20;
+
 
 
     --font-body-family:"Ubuntu", sans-serif;
@@ -304,16 +297,69 @@ blockquote {
 /* .buttons */
 
 .button{
-
+  background-color: rgba(var(--color-theme));
+  color: rgba(var(--color-heading));
+  border: 1px solid rgba(var(--color-heading));
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 56px;
+  text-transform: uppercase;
+  height: 58px;
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 17px;
+    background-image: url(../images/icon/circle.svg);
+}
+.button::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 21px;
+  height: 17px;
+  background-image: url(../images/icon/circle2.svg);
+}
+.button svg{
+    position: relative;
+    top: 4px;
+    margin-left: 9px;
+}
+.button .button--text{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    padding-right: 24px;
+}
+.button .button--text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(var(--color-heading));
 }
 
 .button:hover{
-
+  background-color: rgba(var(--color-theme3));
 }
 
+/* .button--primary */
 .button--primary{
 
 }
+
 .button--secondary{
 
 }
@@ -405,7 +451,7 @@ blockquote {
 }
 
 .row {
-  --bs-gutter-x: 1.6rem;
+  --bs-gutter-x: 15px;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -426,7 +472,7 @@ blockquote {
 
 @media screen and (min-width: 576px) {
   .row {
-    --bs-gutter-x: 2.4rem;
+    --bs-gutter-x: 15px;
   }
 }
 
@@ -1374,3 +1420,14 @@ blockquote {
 }
 
 /* End:  grid columns CSS */
+
+/* start container css */
+.container{
+    max-width: 1360px;
+    padding: 0 15px;
+}
+.container2{
+    max-width: 1282px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
