@@ -1,11 +1,11 @@
 
 :root{
     --color-background: 2, 7, 20;
-    --color-heading: 9, 18, 44, 1;
-    --color-theme: 255, 235, 136, 1;
-    --color-theme2: 73, 61, 158, 1;
-    --color-theme3: 253, 171, 255, 1;
-    --color: 245, 245, 245, 1;
+    --color-heading: #09122C;
+    --color-accent: #FFEB88;
+    --color-accent2: #7339AB;
+    --color-accent3: #fdabff;
+    --color-white: #ffff;
 
     --color-shadow: 0, 0, 0;
     --color-primary-button: 115, 57, 171, 1;
@@ -24,7 +24,7 @@
 
     --font-body-family:"Ubuntu", sans-serif;
     --font-body-weight-bold: 700;
-    --font-heading-family: "Ubuntu", sans-serif;
+    --font-heading-family: "Inter", sans-serif;
     --font-heading-weight: 700;
  
 }
@@ -167,7 +167,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-body-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
@@ -297,9 +297,9 @@ blockquote {
 /* .buttons */
 
 .button{
-  background-color: rgba(var(--color-theme));
-  color: rgba(var(--color-heading));
-  border: 1px solid rgba(var(--color-heading));
+  background-color: var(--color-accent);
+  color: var(--color-heading);
+  border: 1px solid var(--color-heading);
   position: relative;
   font-weight: 700;
   font-size: 20px;
@@ -348,16 +348,16 @@ blockquote {
     right: 0;
     width: 1px;
     height: 100%;
-    background: rgba(var(--color-heading));
+    background: var(--color-heading);
 }
 
 .button:hover{
-  background-color: rgba(var(--color-theme3));
+  background-color: var(--color-accent3);
 }
 
 /* .button--primary */
 .button--primary{
-
+  
 }
 
 .button--secondary{
@@ -445,7 +445,7 @@ blockquote {
 
 @media screen and (min-width: 1600px) {
   .container-fluid {
-    --bs-gutter-x: 9rem;
+    --bs-gutter-x: 17rem;
   }
 
 }
@@ -1421,13 +1421,42 @@ blockquote {
 
 /* End:  grid columns CSS */
 
-/* start container css */
+/* Edn section__title */
+
 .container{
-    max-width: 1360px;
-    padding: 0 15px;
-}
-.container2{
     max-width: 1282px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+
+
+
+/* section__title */
+.section__title{
+  position: relative;
+}
+.section__title .section__heading--text{
+  font-family: var(--font-heading-family);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-accent3);
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.section__title .section__heading--title{
+  position: relative;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.section__title .section__heading--title::before{
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 112px;
+  width: 216.62px;
+  height: 16px;
+  background-image: url(../images/event/stick.svg);
 }
