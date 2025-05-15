@@ -24,10 +24,12 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
-    color: var();
+    color: var(--color-accent2);
     text-decoration: underline;
     display: inline-block;
     transition: all 0.3s ease;
+    margin-left: 8px;
+    display: inline-block;
 }
 .announcement-bar__text a:hover{
     color: var(--color-accent);
