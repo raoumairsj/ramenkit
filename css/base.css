@@ -297,9 +297,6 @@ blockquote {
 /* .buttons */
 
 .button{
-  background-color: var(--color-accent);
-  color: var(--color-heading);
-  border: 1px solid var(--color-heading);
   position: relative;
   font-weight: 700;
   font-size: 20px;
@@ -357,16 +354,19 @@ blockquote {
 
 /* .button--primary */
 .button--primary{
-  
+  background-color: var(--color-accent);
+  color: var(--color-heading);
+  border: 1px solid var(--color-heading);
+}
+
+.button--primary:hover{
+    
 }
 
 .button--secondary{
 
 }
 
-.button--primary:hover{
-    
-}
 .button--secondary:hover{
 
 }
