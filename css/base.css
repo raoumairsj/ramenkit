@@ -1,7 +1,6 @@
 
 :root{
-    --color-background: 2, 7, 20;
-    --color-background2: #d5e8f6;
+    --color-background: #d5e8f6;
     --color-heading: #09122C;
     --color-accent: #FFEB88;
     --color-accent2: #7339AB;
@@ -347,7 +346,7 @@ blockquote {
     right: 0;
     width: 1px;
     height: 100%;
-    background: var(--color-heading);
+    background: var(--color-primary-button-text);
 }
 
 .button:hover{

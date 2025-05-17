@@ -297,6 +297,27 @@ main{
     position: relative;
     padding: 120px 0;
 }
+.featured-anim .one{
+    position: absolute;
+    top: 0;
+    right: 30%;
+}
+.featured-anim .two{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+.featured-anim .three{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.featured-anim .four{
+    position: absolute;
+    bottom: 80px;
+    left: 38%;
+    margin-left: -7px;
+}
 .featured-collection .section__title{
     position: relative;
     border-bottom: 2px solid var(--color-heading);
@@ -316,20 +337,17 @@ main{
     background-color: var(--color-accent3);
     color: var(--color-heading);
 }
-
 .tabs-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .tabs {
     display: flex;
     flex-direction: column;
     gap: 18px;
     width: 100%;
 }
-
 .tab-button {
     padding: 21px 20px;
     text-align: center;
@@ -345,23 +363,9 @@ main{
     font-family: var(--font-heading-family);
     text-transform: capitalize;
 }
-
 .tab-button.active {
     background: var(--color-accent2);
 }
-
-/* .tab-button.active::after {
-    content: '';
-    position: absolute;
-    right: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 40px;
-    background: #7c3aed;
-    border-radius: 0 50% 50% 0;
-} */
-
 .tab-content {
     display: none;
     width: 100%;
@@ -369,28 +373,75 @@ main{
     font-size: 1.2rem;
     transition: all 300ms ease;
 }
-
 .tab-content.active {
     display: block;
     transition: all 300ms ease;
 }
-
 .collections-pills-list{
     padding: 34px 50px 0 57px;
     border-right: 2px solid var(--color-heading);
+    height: 100%;
 }
-
+.featured-card{
+    position: relative;
+    padding: 23px 0 21px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+.featured-card-img{
+    position: relative;
+    z-index: 99;
+}
+.featured-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98px;
+    height: 85px;
+    background-image: url(../images/icon/Vector1.png);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.featured-card::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 55px;
+    background-image: url(../images/icon/Vector2.png);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.featured-card:hover{
+    background-color: var(--color-background);
+}
+.featured-card:hover::before,
+.featured-card:hover:after{
+    opacity: 1;
+    visibility: visible;
+}
+.featured-card:hover .featured-card__heading a{
+    color: var(--color-heading);
+}
+.featured-card:hover .featured-card-btn{
+    color: var(--color-accent2);
+}
 .featured-card__heading{
     margin: 23px 0 6px;
 }
-
 .featured-card__heading a {
     font-size: 20px;
     font-weight: 700;
     color: var(--color-white);
     text-transform: uppercase;
+    transition: all 0.3s ease;
 }
-
 .featured-card-content .featured-card-btn {
     position: relative;
     font-size: 16px;
@@ -400,16 +451,18 @@ main{
     color: var(--color-accent3);
     display: inline-block;
 }
-
 .featured-card-btn svg{
     /* display: none; */
     transition: all 0.3s ease;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -23px;
+    right: -18px;
     width: 0;
 }
 .featured-card-btn:hover svg{
     width: 12px;
+}
+.featured-collection .tab-content__item{
+    padding:  34px 111px 19px 53px;
 }
