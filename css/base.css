@@ -349,7 +349,7 @@ blockquote {
 }
 
 .button:hover{
-  background-color: var(--color-accent3);
+  
 }
 
 /* .button--primary */
@@ -360,7 +360,7 @@ blockquote {
 }
 
 .button--primary:hover{
-    
+    background-color: var(--color-accent3);
 }
 
 .button--secondary{
