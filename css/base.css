@@ -6,11 +6,14 @@
     --color-accent2: #7339AB;
     --color-accent3: #fdabff;
     --color-accent4: #5f4bc6;
+    --color-accent5: #625AD8;
+    --color-accent6: #4F0170;
     --color-white: #ffff;
 
     --color-shadow: 0, 0, 0;
     --color-primary-button: #FFEB88;
     --color-primary-button-text: #09122C;
+    --color-primary-button-outline: #16103c;
 
     --color-secondary-button: 255, 255, 255;
     --color-secondary-button-text: 2, 7, 20;
@@ -357,7 +360,7 @@ blockquote {
 .button--primary{
   background-color: var(--color-primary-button);
   color: var(--color-primary-button-text);
-  border: 1px solid var(--color-heading);
+  border: 1px solid var(--color-primary-button-text);
 }
 
 .button--primary:hover{
@@ -1436,21 +1439,23 @@ blockquote {
 /* section__title */
 .section__title{
   position: relative;
+  margin-bottom: 63px;
 }
-.section__title .section__heading--text{
+.section__title .section__sub-title{
   font-family: var(--font-heading-family);
   font-size: 20px;
   font-weight: 900;
-  color: var(--color-accent3);
+  color: var(--color-accent2);
   margin-bottom: 14px;
-  display: inline-block;
+  display: block;
 }
 .section__title .section__heading--title{
   position: relative;
   font-size: 48px;
   font-weight: 800;
-  color: var(--color-white);
+  color: var(--color-heading);
   text-transform: uppercase;
+  display: inline-block;
 }
 .section__title .section__heading--title::before{
   content: "";
@@ -1460,4 +1465,28 @@ blockquote {
   width: 216.62px;
   height: 16px;
   background-image: url(../images/event/stick.svg);
+}
+.section__title .section__heading--text{
+  color: var(--color-heading);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  font-style: var(--font-heading-family);
+  margin-top: 29px;
+}
+
+/* .section__title.center */
+.section__title.center{
+  text-align: center;
+}
+
+/* .section__title.white */
+.section__title.white .section__sub-title{
+  color: var(--color-accent3);
+}
+.section__title.white .section__heading--title{
+  color: var(--color-white);
+}
+.section__title .section__heading--text{
+  color: var(--color-white);
 }
