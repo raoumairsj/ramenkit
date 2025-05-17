@@ -1,15 +1,17 @@
 
 :root{
     --color-background: 2, 7, 20;
+    --color-background2: #d5e8f6;
     --color-heading: #09122C;
     --color-accent: #FFEB88;
     --color-accent2: #7339AB;
     --color-accent3: #fdabff;
+    --color-accent4: #5f4bc6;
     --color-white: #ffff;
 
     --color-shadow: 0, 0, 0;
-    --color-primary-button: 115, 57, 171, 1;
-    --color-primary-button-text: 2, 7, 20;
+    --color-primary-button: #FFEB88;
+    --color-primary-button-text: #09122C;
 
     --color-secondary-button: 255, 255, 255;
     --color-secondary-button-text: 2, 7, 20;
@@ -354,8 +356,8 @@ blockquote {
 
 /* .button--primary */
 .button--primary{
-  background-color: var(--color-accent);
-  color: var(--color-heading);
+  background-color: var(--color-primary-button);
+  color: var(--color-primary-button-text);
   border: 1px solid var(--color-heading);
 }
 

@@ -318,56 +318,98 @@ main{
 }
 
 .tabs-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .tabs {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 100%;
-      margin-bottom: 30px;
-    }
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
 
-    .tab-button {
-      padding: 20px;
-      text-align: center;
-      border-radius: 20px;
-      background: #5f4bc6;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      box-shadow: 0 5px 0 #1e1e1e;
-      transition: 0.2s ease;
-      cursor: pointer;
-      position: relative;
-    }
+.tab-button {
+    padding: 21px 20px;
+    text-align: center;
+    border-radius: 16px;
+    background: var(--color-accent4);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 5px 0 #1e1e1e;
+    transition: 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    font-family: var(--font-heading-family);
+    text-transform: capitalize;
+}
 
-    .tab-button.active {
-      background: #7c3aed;
-    }
+.tab-button.active {
+    background: var(--color-accent2);
+}
 
-    /* .tab-button.active::after {
-      content: '';
-      position: absolute;
-      right: -25px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 25px;
-      height: 40px;
-      background: #7c3aed;
-      border-radius: 0 50% 50% 0;
-    } */
+/* .tab-button.active::after {
+    content: '';
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 40px;
+    background: #7c3aed;
+    border-radius: 0 50% 50% 0;
+} */
 
-    .tab-content {
-      display: none;
-      width: 100%;
-      text-align: center;
-      font-size: 1.2rem;
-    }
+.tab-content {
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 300ms ease;
+}
 
-    .tab-content.active {
-      display: block;
-    }
+.tab-content.active {
+    display: block;
+    transition: all 300ms ease;
+}
+
+.collections-pills-list{
+    padding: 34px 50px 0 57px;
+    border-right: 2px solid var(--color-heading);
+}
+
+.featured-card__heading{
+    margin: 23px 0 6px;
+}
+
+.featured-card__heading a {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.featured-card-content .featured-card-btn {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    display: inline-block;
+    color: var(--color-accent3);
+    display: inline-block;
+}
+
+.featured-card-btn svg{
+    /* display: none; */
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -23px;
+    width: 0;
+}
+.featured-card-btn:hover svg{
+    width: 12px;
+}
