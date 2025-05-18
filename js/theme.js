@@ -53,6 +53,6 @@
           document.getElementById("content").style.display = "block";
           clearInterval(x);
         }
-        //seconds
       }, 0)
   }());
+  

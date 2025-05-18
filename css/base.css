@@ -2,6 +2,7 @@
 :root{
     --color-background: #d5e8f6;
     --color-heading: #09122C;
+    --color-heading2: #08122d;
     --color-accent: #FFEB88;
     --color-accent2: #7339AB;
     --color-accent3: #fdabff;
@@ -81,13 +82,6 @@ a {
 
 button {
   cursor: pointer;
-}
-
-a svg,
-a path,
-button svg,
-button path {
-  fill: currentColor;
 }
 
 .link-animation {
@@ -352,9 +346,6 @@ blockquote {
     background: var(--color-primary-button-text);
 }
 
-.button:hover{
-  
-}
 
 /* .button--primary */
 .button--primary{
@@ -368,19 +359,41 @@ blockquote {
 }
 
 .button--secondary{
-
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 56px;
+  text-transform: uppercase;
+  height: 58px;
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--color-accent5);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary-button-text);
+  box-shadow: 3px 4px 0px -2px #1e1e1e;
 }
-
-.button--secondary:hover{
-
+.button--secondary svg{
+    position: relative;
+    top: 4px;
+    margin-left: 9px;
 }
-
-
-.button--primary-outline{
-
+.button--secondary .button--text{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    padding-right: 24px;
 }
-.button--secondary-outline{
-
+.button--secondary .button--text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--color-white);
 }
 
 
@@ -1487,6 +1500,6 @@ blockquote {
 .section__title.white .section__heading--title{
   color: var(--color-white);
 }
-.section__title .section__heading--text{
+.section__title.white .section__heading--text{
   color: var(--color-white);
 }
